@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "CmsWeb"
+    }
+  },
+  "defaultProject": "CmsWeb",
+  "cli": {
+    "analytics": "4e866326-5c55-469e-adc9-b79ea680c48b"
+  }
 }
