@@ -2,3 +2,20 @@
 
 
 
+{{ title | uppercase }}
+<br/> >>>>
+{{ getArticle2()?.content }}
+
+<br/>
+{{  footer }}
+
+<button (click)="clicked()">click</button>
+
+<table>
+  <tr *ngFor="let articleTmp of articles">
+    <td>{{ articleTmp.id }}</td>
+    <td>{{ articleTmp.title }}</td>
+    <td>{{ articleTmp.content }}</td>
+  </tr>
+
+</table>
