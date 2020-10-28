@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Observable} from 'rxjs';
-import {Article} from '../shared/interfaces';
+import {ArticleService} from '../services/article.service';
+import {Article} from '../models/article';
+
 
 @Component({
   selector: 'app-article',
@@ -8,27 +10,18 @@ import {Article} from '../shared/interfaces';
   styleUrls: ['./article.component.css']
 })
 export class ArticleComponent implements OnInit {
-  article: Observable<Article>;
-  article2 = { id: 5, title: 'to jest title', content: 'to jest content', rating: 3 } ;
+//  article: Observable<Article>;
   title = 'Nazwa artykulu';
-  dog = { name: 'reksio' };
-  articles: Article[] = [ { id: 5, title: 'to jest title', content: 'to jest content', rating: 3 },
-    { id: 6, title: 'to jest title  6', content: 'to jest content 6', rating: 4 },
-    { id: 7, title: 'to jest title 7', content: 'to jest content 8', rating: 6 }];
+//  articles: Observable<Article[]>;
 
-  constructor() { }
+  constructor(private articleService: ArticleService) {}
+
+  getArticles(): void {
+    this.articleService.getArticles().subscribe();
+  }
 
   ngOnInit(): void {
-   this.article = new Observable<Article>();
-
-  }
-
-  get footer(): string {
-    return 'fff';
-  }
-
-  getArticle2(): Article {
-    return this.article2;
+ //  this.article = new Observable<Article>();
   }
 
   clicked(): void {
