@@ -10,7 +10,7 @@ import {Article} from '../models/article';
   styleUrls: ['./article.component.css']
 })
 export class ArticleComponent implements OnInit {
-//  article: Observable<Article>;
+  article: Observable<Article>;
   title = 'Nazwa artykulu';
 //  articles: Observable<Article[]>;
 
