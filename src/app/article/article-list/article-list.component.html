@@ -1,6 +1,26 @@
 <div class="album py-5 bg-light">
   <div class="container">
 
+ggg
+<!--    <ul *ngIf="articles">
+      <li>
+          {{ articles.length }}
+      </li>
+     <li  *ngFor="let article of articles; index as i">
+        {{i}} {{article.content }}
+      </li>
+    </ul>-->
+
+    <div class="table" *ngIf="articles">
+        <div class="row" *ngFor="let article of articles; index as i">
+          <div class="col-3"> {{ article.id}}</div>
+          <div class="col-3"> {{ article.content}}</div>
+          <div class="col-3"> {{ article.content}}</div>
+        </div>
+    </div>
+
+
+xxx
   <div class="row">
     <div class="col-md-4">
       <div class="card mb-4 shadow-sm">

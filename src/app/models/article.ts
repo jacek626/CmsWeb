@@ -1,10 +1,10 @@
-export class Article {
+export interface Article {
   id: number;
   title: string;
   content: string;
   creationDate: string;
   userId: number;
   categoryId: number;
-  ratingValue: number;
-  ratingCount: number;
+  ratingsNegative: number;
+  ratingsPositive: number;
 }

@@ -12,7 +12,6 @@ import {Article} from '../models/article';
 export class ArticleComponent implements OnInit {
   article: Observable<Article>;
   title = 'Nazwa artykulu';
-//  articles: Observable<Article[]>;
 
   constructor(private articleService: ArticleService) {}
 
@@ -21,7 +20,6 @@ export class ArticleComponent implements OnInit {
   }
 
   ngOnInit(): void {
- //  this.article = new Observable<Article>();
   }
 
   clicked(): void {
